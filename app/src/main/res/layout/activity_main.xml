@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fish.triangle.MainActivity">
+
+    <com.fish.triangle.TriangleView xmlns:tri="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/arrow_top"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:color="#ff0000"
+        tri:direction="top" />
+
+    <com.fish.triangle.TriangleView xmlns:tri="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/arrow_left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:color="@color/green"
+        tri:direction="left" />
+
+    <com.fish.triangle.TriangleView xmlns:tri="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/arrow_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:color="#0000ff"
+        tri:direction="right" />
+
+    <com.fish.triangle.TriangleView xmlns:tri="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/arrow_bottom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tri:direction="bottom" />
+
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="refresh" />
+
+    <Button
+        android:id="@+id/changeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="changeColor" />
+
+</LinearLayout>

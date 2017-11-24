@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TriangleView">
+        <attr name="direction" format="integer">
+            <enum name="top" value="1" />
+            <enum name="left" value="0" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="android:color" />
+    </declare-styleable>
+
+</resources>
