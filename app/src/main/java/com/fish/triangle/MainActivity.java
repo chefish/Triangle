@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         leftView = (TriangleView) findViewById(R.id.arrow_top);
 
         findViewById(R.id.refresh).setOnClickListener(new View.OnClickListener() {
@@ -26,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 leftView.setColor(Color.YELLOW);
+            }
+        });
+
+        findViewById(R.id.changeDirection).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                leftView.setDirection(TriangleView.DR_BOTTOM);
             }
         });
     }

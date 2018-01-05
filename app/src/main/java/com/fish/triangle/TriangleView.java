@@ -21,6 +21,7 @@ public class TriangleView extends View {
     private Paint paint = new Paint();
     private Path path = new Path();
 
+
     public int getColor() {
         return color;
     }
@@ -57,6 +58,10 @@ public class TriangleView extends View {
 
     }
 
+    public static final int DR_LEFT = 0;
+    public static final int DR_TOP = 1;
+    public static final int DR_RIGHT = 2;
+    public static final int DR_BOTTOM = 3;
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
@@ -64,16 +69,21 @@ public class TriangleView extends View {
         initPath();
     }
 
+    public void setDirection(int direction) {
+        this.direction = direction;
+        requestLayout();
+    }
+
     private void initPath() {
         int w = getWidth() / 2;
         int h = getHeight() / 2;
-        if (direction == 0) {
+        if (direction == DR_LEFT) {
             getLeftTriangle(w, h);
-        } else if (direction == 1) {
+        } else if (direction == DR_TOP) {
             getTopTriangle(w, h);
-        } else if (direction == 2) {
+        } else if (direction == DR_RIGHT) {
             getRightTriangle(w, h);
-        } else if (direction == 3) {
+        } else if (direction == DR_BOTTOM) {
             getDownTriangle(w, h);
         } else {
             throw new IllegalStateException("direction is illegal " + direction);
