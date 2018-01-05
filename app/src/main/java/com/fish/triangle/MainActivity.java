@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     TriangleView leftView;
 
     int x;
+    int tt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
