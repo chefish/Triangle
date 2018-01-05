@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
 
     TriangleView leftView;
 
+    int x;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,5 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 leftView.setDirection(TriangleView.DR_BOTTOM);
             }
         });
+
+
     }
 }
